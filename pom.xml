@@ -39,4 +39,14 @@
 		</pluginManagement>
     <finalName>HelloWebApp</finalName>
   </build>
+	<distributionManagement>
+    <repository>
+        <id>releases</id>
+        <url>http://domain:port/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <url>http://domain:port/content/repositories/snapshots</url>
+    </snapshotRepository>
+</distributionManagement>
 </project>
