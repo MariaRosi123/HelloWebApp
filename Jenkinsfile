@@ -16,7 +16,7 @@ pipeline {
         }
         stage ('Deploy') {
             steps {
-                    bat 'mvn deploy'
+                    bat 'docker build --tag=HelloWebApp .'
             }
         }
     }
