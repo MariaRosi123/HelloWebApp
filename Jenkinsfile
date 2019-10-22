@@ -16,7 +16,7 @@ pipeline {
         }
         stage ('Deploy') {
             steps {
-                    sh 'docker build -t mariarosi/HelloWebApp:2.0.0 .'
+                    cat 'docker build -t mariarosi/HelloWebApp:2.0.0 .'
             }
         }
     }
