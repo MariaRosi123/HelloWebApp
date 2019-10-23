@@ -1,23 +1,23 @@
 pipeline {
     agent any
     tools {
-        maven 'maven-3'
+        maven "maven-3"
     }
     stages {
-        stage ('Version') {
+        stage ("Version") {
                steps {
-                   bat 'mvn --version'
+                   sh "mvn --version"
                }
         }
-        stage ('Clean and Package') {
+        stage ("Clean and Package") {
             steps {
-                    bat 'mvn clean compile'
+                    sh "mvn clean compile"
             }
         }
-        stage ('Deploy') {
+        stage ("Deploy") {
             steps {
-                    bat 'docker --version'
-                    bat 'docker build -t mariarosi/HelloWebApp:2.0.0 .'
+                    sh "docker --version"
+                    sh "docker build -t mariarosi/HelloWebApp:2.0.0 ."
             }
         }
     }
