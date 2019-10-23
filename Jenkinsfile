@@ -16,6 +16,7 @@ pipeline {
         }
         stage ('Deploy') {
             steps {
+                    bat 'docker --version'
                     bat 'docker build -t mariarosi/HelloWebApp:2.0.0 .'
             }
         }
