@@ -18,7 +18,7 @@ pipeline {
         stage ("Deploy") {
             steps {
                     echo "Deploy code goes here"
-                    bat "COPY target/HelloWebApp.war /usr/local/tomcat/webapps/"
+                   deploy adapters: [tomcat7(credentialsId: 'TomcatAdmin', path: '', url: 'http://localhost:8080')], contextPath: null, war: 'target/HelloWebApp.war'
 
             }
         }
