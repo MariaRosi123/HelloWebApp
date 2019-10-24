@@ -41,11 +41,7 @@
     </pluginRepository>
 </pluginRepositories>
 	<distributionManagement>
-       	<snapshotRepository>
-            <id>MylocalSnap</id>
-            <name>RepositoryProxySnap</name>
-            <url>http://127.0.0.1:8080/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
+
 </distributionManagement>
 
   <build>
