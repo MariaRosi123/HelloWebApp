@@ -23,7 +23,7 @@ pipeline {
         stage ("Deploy") {
             steps {
                     echo "Deploy code goes here"
-                    COPY "target/HelloWebApp.war /usr/local/tomcat/hello-webapp"
+                    sh "docker build --tag=hello-webapp ."
 
             }
         }
