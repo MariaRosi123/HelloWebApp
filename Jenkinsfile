@@ -12,7 +12,7 @@ pipeline {
         stage ("Clean and Package") {
             steps {
                     sh "mvn clean compile"
-                    sh "mvn clean build"
+                    sh "mvn clean package"
             }
         }
         stage ("Deploy") {
