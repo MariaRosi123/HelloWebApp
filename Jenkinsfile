@@ -17,7 +17,7 @@ pipeline {
         }
         stage ("Artifacts") {
              steps {
-                archive "target/*.war"
+                archiveArtifacts 'target/HelloWebApp.war'
              }
         }
         stage ("Deploy") {
