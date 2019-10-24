@@ -23,6 +23,7 @@ pipeline {
         stage ("Deploy") {
             steps {
                     echo "Deploy code goes here"
+                    sh "COPY target/HelloWebApp.war /usr/local/tomcat/hello-webapp"
 
             }
         }
