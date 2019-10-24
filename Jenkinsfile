@@ -18,8 +18,7 @@ pipeline {
         stage ("Deploy") {
             steps {
                     echo "Deploy code goes here"
-                    archiveArtifacts "target/HelloWebApp.war"
-                    bat "mvn deploy"
+                    bat "COPY target/HelloWebApp.war /usr/local/tomcat/webapps/"
 
             }
         }
