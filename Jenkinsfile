@@ -17,13 +17,13 @@ pipeline {
         }
         stage ("Artifacts") {
              steps {
-                archiveArtifacts 'target/HelloWebApp.war'
+                archiveArtifacts "target/HelloWebApp.war"
              }
         }
         stage ("Deploy") {
             steps {
                     echo "Deploy code goes here"
-                    sh "COPY target/HelloWebApp.war /usr/local/tomcat/hello-webapp"
+                    COPY "target/HelloWebApp.war /usr/local/tomcat/hello-webapp"
 
             }
         }
