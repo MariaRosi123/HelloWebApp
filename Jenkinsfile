@@ -15,6 +15,11 @@ pipeline {
                     sh "mvn clean package"
             }
         }
+        stage ("Artifacts") {
+             steps {
+                archive "target/*.war"
+             }
+        }
         stage ("Deploy") {
             steps {
                     echo "Deploy code goes here"
