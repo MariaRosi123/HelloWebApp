@@ -18,8 +18,7 @@ pipeline {
         stage ("Deploy") {
             steps {
                     echo "Deploy code goes here"
-                   deploy adapters: [tomcat7(credentialsId: 'TomcatAdmin', path: '', url: 'http://localhost:8080')], contextPath: null, war: 'target/HelloWebApp.war'
-
+                    deploy contextPath: null, war: 'target/HelloWebApp.war'
             }
         }
     }
