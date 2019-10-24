@@ -15,15 +15,10 @@ pipeline {
                     sh "mvn clean package"
             }
         }
-        stage ("Artifacts") {
-             steps {
-                archiveArtifacts "target/HelloWebApp.war"
-             }
-        }
         stage ("Deploy") {
             steps {
                     echo "Deploy code goes here"
-                    sh "docker build --tag=hello-webapp ."
+                    sh "docker build --tag=hello-webappnew ."
 
             }
         }
