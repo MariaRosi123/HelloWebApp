@@ -18,7 +18,7 @@ pipeline {
         stage ("Deploy") {
             steps {
                     echo "Deploy code goes here"
-                    deploy contextPath: null, war: 'target/HelloWebApp.war'
+                    bat '''copy D:\\Maria\\Wipro\\Training\\Jenkins\\JenkinsHome\\workspace\\HelloWebApp\\target\\*.war D:\\Maria\\apache-tomcat-7.0.96\\webapps'''
             }
         }
     }
